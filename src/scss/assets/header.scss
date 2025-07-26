@@ -1,0 +1,93 @@
+@use '../assets/variablesSCSS.scss' as *;
+@use '../assets/mixin.scss' as *;
+
+.header {
+   position: relative;
+   z-index: 20;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   border-radius: 0 0 32px 32px;
+   background-color: var(--color-white);
+   box-shadow: 0 4px 20px 0 var(--color-shadow);
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 100%;
+
+   &__container {}
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+   }
+
+   &__logo {
+
+      img,
+      svg {
+         max-height: 40px;
+         width: 100%;
+
+         @media (min-width:1024px) {
+            max-height: 62px;
+         }
+      }
+   }
+
+   &__nav {
+
+      ol {
+         margin-bottom: 40px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 32px;
+         font-size: 20px;
+
+         @media (min-width:1024px) {
+            margin-bottom: 0;
+            flex-direction: row;
+            font-size: 16px;
+            row-gap: 16px;
+         }
+      }
+   }
+
+   &__contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      font-size: 20px;
+
+      @media (min-width:1024px) {
+         flex-direction: row;
+         gap: 12px;
+         font-size: 16px;
+      }
+
+      a {
+         padding: 4px 0;
+         white-space: nowrap;
+
+         @media (min-width:1024px) {
+            &:not(:last-child)::after {
+               content: '|';
+               margin-left: 12px;
+               color: var(--color-black-a02);
+               font-style: normal;
+               font-size: inherit;
+            }
+         }
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+   }
+}

@@ -1,0 +1,131 @@
+@use '../assets/variablesSCSS.scss' as *;
+@use '../assets/mixin.scss' as *;
+
+.footer {
+   --column-gap: 24px;
+   padding-top: 48px;
+   padding-bottom: 40px;
+   background-color: var(--color-pale-blue);
+
+   @include size_adaptive (--column-gap, 24, 112, 1024, $max-width-container-big);
+
+   @media (min-width:$max-width-container-big) {
+      --column-gap: 112px;
+   }
+
+   &__container {}
+
+   &__body {}
+
+   &__block {
+      margin-bottom: 76px;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--column-gap);
+      flex-wrap: wrap;
+
+      @media (min-width:1024px) {
+         flex-wrap: nowrap;
+      }
+   }
+
+   &__logo {
+      img {
+         width: 183px;
+      }
+
+      @media (min-width:1024px) {
+         order: 1;
+      }
+   }
+
+   &__nav {
+      flex: 0 0 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: var(--column-gap);
+      row-gap: 40px;
+
+      @media (min-width:1024px) {
+         flex: 1 1 auto;
+         justify-content: center;
+         order: 2;
+      }
+
+      ol {
+         width: 150px;
+      }
+
+      li {
+         &:not(:last-child) {
+            margin-bottom: 16px;
+         }
+      }
+
+      a {
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 100%;
+         color: #fff;
+      }
+   }
+
+   &__text {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 114%;
+      max-width: 865px;
+      color: var(--color-white-a04);
+   }
+
+   &__contacts {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 12px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: var(--color-white);
+
+      a {
+         white-space: nowrap;
+         text-align: center;
+      }
+
+      @media (min-width:$max-width-container-big) {
+         flex-direction: row;
+
+         a:not(:last-child)::after {
+            content: '|';
+            padding-left: 12px;
+            color: var(--color-white-a02);
+         }
+      }
+   }
+
+   &__action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      @media (min-width:1024px) {
+         order: 3;
+      }
+   }
+
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      color: var(--color-white-a04);
+   }
+
+   &__copyright {}
+
+   &__prepare {
+      text-align: right;
+   }
+}

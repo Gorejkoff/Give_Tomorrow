@@ -1,0 +1,12 @@
+.fund-documents {
+
+   &__container {}
+
+   &__swiper {
+      overflow: hidden;
+
+      .swiper-slide {
+         width: max-content;
+      }
+   }
+}

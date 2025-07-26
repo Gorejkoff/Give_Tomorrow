@@ -1,0 +1,14 @@
+<section class="news news__swiper section-padding">
+   <div class="news__container">
+      <div class="news__title section-title-large">Новости фонда</div>
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            @@loop('./News-Slide.html',[1,1,1,1,1,1,1,1,1,1,1,1])
+         </div>
+      </div>
+      <div class="news__buttons">
+         <a href="#0" class="news__button-all">Читать все новости</a>
+         @@include('../UI/Swiper-Buttons.html',{})
+      </div>
+   </div>
+</section>

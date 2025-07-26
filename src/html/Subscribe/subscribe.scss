@@ -1,0 +1,102 @@
+@use '../../scss/assets/variablesSCSS.scss' as *;
+
+.subscribe {
+
+   overflow: hidden;
+
+   &__container {}
+
+   &__body {
+
+      @media (min-width:998px) {
+         display: flex;
+      }
+   }
+
+   &__content {
+      padding-bottom: 40px;
+      flex: 0 0 min(600px, 50%);
+
+      @media (min-width:998px) {
+         padding-bottom: 112px;
+      }
+   }
+
+   &__content-field {
+      padding: 24px 20px;
+      border-radius: 24px;
+      background-color: var(--color-white);
+
+      @media (min-width:768px) {
+         padding: 24px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 32px;
+
+      @media (min-width:998px) {
+         margin-bottom: 52px;
+      }
+   }
+
+   &__text {
+      margin-bottom: 32px;
+      max-width: 400px;
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--color-black-a06);
+
+      @media (min-width:998px) {
+         margin-bottom: 52px;
+      }
+   }
+
+   &__form {
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+
+      @media (min-width:600px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      .input-checkbox,
+      .intut-text {
+         margin: 0;
+      }
+   }
+
+   &__links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      svg,
+      img {
+         width: 48px;
+      }
+   }
+
+   &__image {
+      position: relative;
+
+      flex: 1 1 auto;
+
+      img {
+         width: 100%;
+
+         @media (min-width:998px) {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-45%);
+            object-fit: cover;
+            height: auto;
+            width: 137%;
+
+         }
+      }
+   }
+}

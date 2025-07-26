@@ -1,0 +1,46 @@
+.history {
+   padding-bottom: 80px;
+   padding-top: 72px;
+
+   @media (min-width:1024px) {
+      padding-bottom: 112px;
+   }
+
+   &__container {}
+
+   &__title {
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      color: var(--color-black);
+   }
+
+   &__buttons {
+      display: inline-block;
+      margin-bottom: 48px;
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--color-black-a04);
+
+      p {
+         margin-bottom: 16px;
+      }
+   }
+
+   &__signature {
+      color: var(--color-black-a08);
+   }
+}
+
+.js-history-tab {
+   display: none;
+
+   &.active {
+      display: block;
+   }
+}

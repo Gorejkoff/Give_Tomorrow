@@ -1,0 +1,37 @@
+[
+   {
+      "name": "Кира Иванова",
+      "image": "jpg/foto-1.jpg",
+      "promptly": false
+   },
+   {
+      "name": "Кира Иванова",
+      "image": "jpg/foto-3.jpg",
+      "promptly": false
+   },
+   {
+      "name": "Даша Иванова",
+      "image": "jpg/foto-6.jpg",
+      "promptly": true
+   },
+   {
+      "name": "Влад",
+      "image": "jpg/foto-2.jpg",
+      "promptly": false
+   },
+   {
+      "name": "Даша Иванова",
+      "image": "jpg/foto-4.jpg",
+      "promptly": true
+   },
+   {
+      "name": "Кира Иванова",
+      "image": "jpg/foto-7.jpg",
+      "promptly": false
+   },
+   {
+      "name": "Кира Иванова",
+      "image": "jpg/foto-5.jpg",
+      "promptly": false
+   }
+]

@@ -1,0 +1,10 @@
+<section class="about-us section-padding">
+   <div class="about-us__container">
+      @@include('../UI/Swiper-Header.html',{'title':'Почему мы'})
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            @@loop('./About-Us-Card.html','json/About-Us.json')
+         </div>
+      </div>
+   </div>
+</section>

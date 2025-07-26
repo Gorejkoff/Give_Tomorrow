@@ -1,0 +1,147 @@
+<section class="help section-padding">
+   <div class="help__container">
+      <h2 class="help__title">Хочу помочь!</h2>
+      <div class="help__tab-buttons">
+         @@include('../UI/Tabs-Switching-Buttons.html',{name:'js-payment-method-button',text:['Оплата картой','Yandex pay','Мобильный платеж']})
+      </div>
+      <div>
+         <div id="go-help-one"></div>
+         <div id="go-help-monthly"></div>
+      </div>
+      <div class="help__content">
+         <div class="help__baner">
+            <div class="help__baner-image">
+               <img src="@img/jpg/image-5.jpg" alt="фотография ребенка">
+            </div>
+            <div class="help__baner-text">
+               <div class="help__baner-title">Важно каждое пожертвование</div>
+               <div>По данным Министерства социальной политики и труда Удмуртской Республики на 1 января 2022 года в Удмуртии живут 6 568 детей-инвалидов, из них — 445 тяжелобольных ребенка. Фонд дарит маленьким жителям Республики шанс быть полноценными членами общества, дает возможность верить в здоровое и счастливое ЗАВТРА!</div>
+            </div>
+         </div>
+
+         <div class="help__payment-bg">
+            <div class="js-payment-method-tab active" data-tab_ts="0">
+               @@include('../UI/Tabs-Switching-Buttons.html',{name:'js-help-fee-tab-button',text:['Разовое','Ежемесячное']})
+               <form class="js-form-amount-payments js-help-fee-tab active" data-tab_ts="0" action="#0" method="post" name="help-one">
+                  <div class="help__form-title">Сумма пополнения</div>
+                  <div class="help__form-group-checkbox">
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="100">
+                        <span>100 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="200">
+                        <span>200 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="300">
+                        <span>300 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="400">
+                        <span>400 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="500">
+                        <span>500 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="600">
+                        <span>600 ₽ </span>
+                     </label>
+                  </div>
+                  <label class="help__input-sum intut-text">
+                     <input type="number" name="other_sum" placeholder="Другая сумма">
+                     <span>₽</span>
+                  </label>
+                  <div class="help__form-title">Ваши данные</div>
+                  <label class="intut-text">
+                     <input type="text" name="name" placeholder="Имя">
+                  </label>
+                  <label class="intut-text">
+                     <input type="text" name="email" placeholder="Email">
+                  </label>
+                  <label class="intut-text">
+                     <textarea name="comment" placeholder="Комментарий"></textarea>
+                  </label>
+                  @@include('../UI/Input-Checkbox.html',{text:'Подписаться на рассылку фонда'})
+                  <button class="help__form-button button-color" type="submit">
+                     Пожертвовать в фонд
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.4219 4.45326C16.5728 3.60627 15.4228 3.12997 14.2235 3.1285C13.0242 3.12704 11.8731 3.60054 11.0219 4.44545L10 5.39467L8.97736 4.44232C8.12639 3.59373 6.97317 3.11795 5.7714 3.11963C4.56962 3.12132 3.41774 3.60034 2.56915 4.45131C1.72057 5.30228 1.24478 6.4555 1.24646 7.65727C1.24815 8.85904 1.72717 10.0109 2.57814 10.8595L9.55861 17.9423C9.61676 18.0014 9.68608 18.0483 9.76253 18.0803C9.83898 18.1123 9.92104 18.1288 10.0039 18.1288C10.0868 18.1288 10.1689 18.1123 10.2453 18.0803C10.3218 18.0483 10.3911 18.0014 10.4492 17.9423L17.4219 10.8595C18.2711 10.0098 18.7481 8.85768 18.7481 7.65639C18.7481 6.45509 18.2711 5.30296 17.4219 4.45326ZM16.5352 9.98139L10 16.6095L3.46095 9.97514C2.84557 9.35975 2.49985 8.52511 2.49985 7.65482C2.49985 6.78454 2.84557 5.9499 3.46095 5.33451C4.07634 4.71913 4.91098 4.37341 5.78126 4.37341C6.65155 4.37341 7.48619 4.71913 8.10158 5.33451L8.1172 5.35014L9.57423 6.70561C9.68989 6.81324 9.84202 6.87307 10 6.87307C10.158 6.87307 10.3101 6.81324 10.4258 6.70561L11.8828 5.35014L11.8985 5.33451C12.5143 4.71954 13.3491 4.37438 14.2194 4.37497C15.0897 4.37555 15.9241 4.72184 16.5391 5.33764C17.154 5.95344 17.4992 6.78831 17.4986 7.6586C17.498 8.52888 17.1518 9.36329 16.536 9.97826L16.5352 9.98139Z" fill="white" />
+                     </svg>
+                  </button>
+                  <div class="help__privacy-policy">
+                     Нажимая на кнопку, вы принимаете <a href="#0">политику конфиденциальности</a> и даете согласие на обработку персональных данных.
+                  </div>
+               </form>
+               <form class="js-form-amount-payments js-help-fee-tab" data-tab_ts="1" action="#0" method="post" name="help-monthly">
+                  <div class="help__form-title">Сумма пополнения (Ежемесячно)</div>
+                  <div class="help__form-group-checkbox">
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="100">
+                        <span>50 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="200">
+                        <span>100 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="300">
+                        <span>150 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="400">
+                        <span>200 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="500">
+                        <span>300 ₽</span>
+                     </label>
+                     <label class="help__form-checkbox">
+                        <input type="radio" name="sum" value="600">
+                        <span>400 ₽ </span>
+                     </label>
+                  </div>
+                  <label class="help__input-sum intut-text">
+                     <input type="number" name="other_sum" placeholder="Другая сумма">
+                     <span>₽</span>
+                  </label>
+                  <div class="help__form-title">Ваши данные</div>
+                  <label class="intut-text">
+                     <input type="text" name="name" placeholder="Имя">
+                  </label>
+                  <label class="intut-text">
+                     <input type="text" name="email" placeholder="Email">
+                  </label>
+                  <label class="intut-text">
+                     <textarea name="comment" placeholder="Комментарий"></textarea>
+                  </label>
+                  @@include('../UI/Input-Checkbox.html',{text:'Подписаться на рассылку фонда'})
+                  <button class="help__form-button button-color" type="submit">
+                     Пожертвовать в фонд
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.4219 4.45326C16.5728 3.60627 15.4228 3.12997 14.2235 3.1285C13.0242 3.12704 11.8731 3.60054 11.0219 4.44545L10 5.39467L8.97736 4.44232C8.12639 3.59373 6.97317 3.11795 5.7714 3.11963C4.56962 3.12132 3.41774 3.60034 2.56915 4.45131C1.72057 5.30228 1.24478 6.4555 1.24646 7.65727C1.24815 8.85904 1.72717 10.0109 2.57814 10.8595L9.55861 17.9423C9.61676 18.0014 9.68608 18.0483 9.76253 18.0803C9.83898 18.1123 9.92104 18.1288 10.0039 18.1288C10.0868 18.1288 10.1689 18.1123 10.2453 18.0803C10.3218 18.0483 10.3911 18.0014 10.4492 17.9423L17.4219 10.8595C18.2711 10.0098 18.7481 8.85768 18.7481 7.65639C18.7481 6.45509 18.2711 5.30296 17.4219 4.45326ZM16.5352 9.98139L10 16.6095L3.46095 9.97514C2.84557 9.35975 2.49985 8.52511 2.49985 7.65482C2.49985 6.78454 2.84557 5.9499 3.46095 5.33451C4.07634 4.71913 4.91098 4.37341 5.78126 4.37341C6.65155 4.37341 7.48619 4.71913 8.10158 5.33451L8.1172 5.35014L9.57423 6.70561C9.68989 6.81324 9.84202 6.87307 10 6.87307C10.158 6.87307 10.3101 6.81324 10.4258 6.70561L11.8828 5.35014L11.8985 5.33451C12.5143 4.71954 13.3491 4.37438 14.2194 4.37497C15.0897 4.37555 15.9241 4.72184 16.5391 5.33764C17.154 5.95344 17.4992 6.78831 17.4986 7.6586C17.498 8.52888 17.1518 9.36329 16.536 9.97826L16.5352 9.98139Z" fill="white" />
+                     </svg>
+                  </button>
+                  <div class="help__privacy-policy">
+                     Нажимая на кнопку, вы принимаете <a href="#0">политику конфиденциальности</a> и даете согласие на обработку персональных данных.
+                  </div>
+               </form>
+            </div>
+            <div class="js-payment-method-tab" data-tab_ts="2">
+               <div class="help__fee-info-title">SMS удобный способом:</div>
+               <ul class="help__fee-info-list">
+                  <li>Со сберкарты
+                     <p>Отправьте <b>СМС на номер 900</b> с текстом: <b>УДМ 500</b>, где 500 — любая сумма пожертвования</p>
+                  </li>
+                  <li>Со счета мобильного
+                     <p>Отправьте <b>СМС на номер 3434</b> с текстом: <b>УДМ 500</b>, где 500 — любая сумма пожертвования (МЕГАФОН, МТС, БИЛАЙН)</p>
+                  </li>
+               </ul>
+               <p>Отправьте <b>СМС на номер 7715</b> с текстом: <b>ДЕЛО 500</b>, где 500 – любая сумма пожертвования (ТЕЛЕ2, МЕГАФОН, БИЛАЙН, МТС)</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

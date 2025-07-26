@@ -1,0 +1,43 @@
+@use '../../scss/assets/variablesSCSS.scss' as *;
+
+.help-quantity {
+
+   &__container {}
+
+   &__enumeration {
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 80px;
+      justify-content: center;
+
+      @media (min-width:$max-width-container) {
+         justify-content: space-between;
+      }
+   }
+
+   &__enumeration-name {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 129%;
+      color: var(--color-black-a06);
+   }
+
+   &__enumeration-data {
+      font-weight: 500;
+      font-size: 40px;
+      text-align: center;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+
+      @media (min-width:1024px) {
+         font-size: 56px;
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+   }
+}

@@ -1,0 +1,24 @@
+@use '../assets/mixin.scss' as *;
+@use '../assets/variablesSCSS.scss' as *;
+
+.mobile-menu {
+   --offset-top: calc(var(--height-header) + 40px);
+   padding-top: var(--offset-top, 100px);
+   padding-left: var(--padding-container, 20px);
+   padding-right: var(--padding-container, 20px);
+
+   position: fixed;
+   top: 0;
+   left: 100%;
+   z-index: 10;
+   height: var(--vh);
+   width: 100%;
+   background-color: var(--color-white);
+   transition: left 0.5s;
+}
+
+.menu-is-open {
+   .mobile-menu {
+      left: 0;
+   }
+}

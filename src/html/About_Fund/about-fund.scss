@@ -1,0 +1,56 @@
+.about-fund {
+   padding-top: 80px;
+
+   &__container {}
+
+   &__body {
+      @media (min-width:1024px) {
+         display: flex;
+         justify-content: space-between;
+
+      }
+   }
+
+   &__contant {
+      flex: 0 1 620px;
+
+      &>*:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__contant-title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+
+      @media (min-width:768px) {
+         font-size: 40px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 64px;
+      }
+   }
+
+   &__contant-text {
+      font-size: 16px;
+      line-height: 133%;
+      color: var(--color-black-a08);
+
+      @media (min-width:768px) {
+         font-size: 18px;
+      }
+   }
+
+   &__baner {
+      text-align: center;
+
+      img,
+      svg {
+         width: 100%;
+         max-width: 400px;
+      }
+   }
+}

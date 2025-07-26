@@ -1,0 +1,89 @@
+@use '../../scss/assets/variablesSCSS.scss' as *;
+@use '../../scss/assets/mixin.scss' as *;
+
+.swiper-grid {
+   --offset-content: 140px;
+   padding-top: 80px;
+
+   @media (min-width:1024px) {
+      padding-top: 0;
+      margin-top: var(--offset-content);
+   }
+
+   @include size_adaptive (--offset-content, 40, 140, 768, $max-width-container);
+
+   &__container {}
+
+   &__body {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .button-circle {
+         display: none;
+
+         @media (min-width:1024px) {
+            display: flex;
+            margin-top: calc(var(--offset-content) * -1);
+         }
+      }
+   }
+
+   &__image {
+      position: relative;
+      padding-bottom: 100%;
+      overflow: hidden;
+      border-radius: 16px;
+
+      @media (min-width:1024px) {
+         border-radius: 24px;
+      }
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   .swiper {
+      flex: 1 1 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      --gap: 16px;
+      --width-slider: calc((var(--width) - var(--gap) * 3) / 4);
+
+
+      @media (min-width:1024px) {
+         --gap: 24px;
+         border-radius: 24px;
+         margin-top: calc(var(--offset-content) * -1);
+      }
+
+   }
+
+   @media (min-width:1024px) {
+      .swiper-wrapper {
+         flex-direction: column;
+         flex-wrap: wrap;
+         height: calc(var(--width-slider) * 2 + var(--gap));
+      }
+
+      .swiper-slide {
+         width: var(--width-slider);
+
+         &:nth-child(3n + 1) {
+            margin-bottom: var(--gap);
+         }
+
+         &:nth-child(3n+3) {
+            padding-bottom: 100%;
+            width: calc(var(--width-slider) * 2 + var(--gap)) !important;
+         }
+      }
+   }
+}

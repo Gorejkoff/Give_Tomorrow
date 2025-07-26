@@ -1,0 +1,135 @@
+.additionally {
+   padding-top: 80px;
+   padding-bottom: 80px;
+
+   @media (min-width:1024px) {
+      padding-top: 112px;
+      padding-bottom: 112px;
+   }
+
+   &__body {
+      padding: 40px 20px 20px;
+      border-radius: 48px;
+      background: linear-gradient(166deg, #f9f9f9 0%, #e8e8e8 100%);
+
+      @media (min-width:1024px) {
+         padding: 64px 40px 40px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 40px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 100%;
+      text-align: center;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: 1;
+      gap: 20px;
+
+      @media (min-width:768px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width:1024px) {
+         grid-template-columns: repeat(4, 1fr);
+         gap: 40px;
+      }
+   }
+
+   &__cell {
+      padding: 24px;
+      position: relative;
+      min-height: 212px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      border-radius: 24px;
+      overflow: hidden;
+
+      &.wide {
+         @media (min-width:768px) {
+            grid-column: span 2;
+
+            .additionally__cell-text {
+               font-size: 24px;
+            }
+         }
+      }
+
+      &.white-bg {
+         background-color: var(--color-white);
+
+         .additionally__cell-theme {
+            color: var(--color-black-a06);
+         }
+
+         .additionally__cell-text {
+            color: var(--color-black);
+         }
+      }
+
+      &.green-bg {
+         background-color: var(--color-green);
+
+         .additionally__cell-theme,
+         .additionally__cell-text {
+            color: var(--color-white);
+         }
+      }
+   }
+
+   &__cell-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__cell-theme {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 14px;
+      line-height: 129%;
+      color: var(--color-white-a06);
+   }
+
+   &__cell-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+   }
+
+   &__cell-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: var(--color-white);
+
+      @media (min-width:1150px) {
+         font-size: 18px;
+      }
+   }
+
+   &__cell-insignia {
+
+      img,
+      svg {
+         width: 72px;
+
+         @media (min-width:1150px) {
+            width: 96px;
+         }
+      }
+   }
+}

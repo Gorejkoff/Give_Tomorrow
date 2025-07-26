@@ -1,0 +1,24 @@
+<section class="raise-money section-padding">
+   <div class="dark-bg">
+      <div class="raise-money__bg">
+         <div class="raise-money__container">
+            <h2 class="raise-money__title">Благотворительный сбор</h2>
+            <div class="raise-money__button-tabs">
+               @@include('../UI/Tabs-Switching-Buttons.html',{ name:'js-raise-money-tabs-button',text:['Сбор детям','Сбор для проектов']})
+            </div>
+         </div>
+      </div>
+      <div class="raise-money__container">
+         <div class="raise-money__grid js-raise-money-tab active" data-tab_ts="0">
+            @@loop('./Raise-Money-Cell.html','json/Raise-Money-List-1.json')
+         </div>
+         <div class="raise-money__grid js-raise-money-tab" data-tab_ts="1">
+            @@loop('./Raise-Money-Cell.html','json/Raise-Money-List-2.json')
+         </div>
+         <div class="raise-money__more">
+            <a href="#0" class="button-border">Ещё N подопечным нужна помощь</a>
+         </div>
+         @@include('../Additionally/Additionally.html',{})
+      </div>
+   </div>
+</section>

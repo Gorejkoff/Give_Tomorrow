@@ -1,0 +1,97 @@
+.news {
+   &__title {
+      text-align: center;
+   }
+
+   &__card {
+      border-radius: 24px;
+      padding: 8px 8px 20px 8px;
+      background-color: var(--color-white);
+   }
+
+   &__card-image {
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 82.57%;
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__shell {
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+
+   &__card-name {
+      padding-bottom: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      color: var(--color-black);
+   }
+
+   &__card-footer {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      border-top: 1px solid var(--color-very-pale-blue);
+      color: var(--color-black-a04);
+
+      &>* {
+         display: flex;
+         align-items: center;
+         gap: 8px;
+      }
+   }
+
+   &__buttons {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+   }
+
+   &__button-all {
+      padding: 8px 24px;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      text-align: center;
+      background-color: var(--color-white);
+      border-radius: 100px;
+
+      @media (min-width:768px) {
+         font-size: 20px;
+      }
+
+      @media (min-width:1024px) {
+         min-height: 64px;
+         font-size: 24px;
+      }
+
+   }
+
+   .swiper {
+      overflow: hidden;
+   }
+}

@@ -1,0 +1,31 @@
+:root {
+   --font-family: "Aeonik", sans-serif;
+
+   --color-white: #ffffff;
+   --color-white-a06: #ffffff99; // rgba(255, 255, 255, 0.6)
+   --color-white-a04: #ffffff66; // rgba(255, 255, 255, 0.4)
+   --color-white-a02: #ffffff33; // rgba(255, 255, 255, 0.2)
+   --color-black: #333333;
+   --color-black-a08: #333333cc; // rgba(51, 51, 51, 0.8)
+   --color-black-a06: #33333399; // rgba(51, 51, 51, 0.6)
+   --color-black-a04: #33333366; // rgba(51, 51, 51, 0.4)
+   --color-black-a02: #33333333; // rgba(51, 51, 51, 0.2)
+   --color-signal-black: #303030;
+   --color-green: #4aa83b;
+   --color-green-a02: #4aa83b33;
+   --color-green-a06: #4aa83b66;
+   --color-sapphire-blue: #eaeaec;
+   --color-pale-blue: #222a3b;
+   --color-very-pale-blue: #d9dce3;
+   --color-smoky-White: #ececec;
+   --color-modal-bg: rgba(0, 0, 0, 0.6);
+   --color-heliotrope: #bc7aff;
+   --color-shadow: rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+
+   --vh: 100vh;
+
+   @supports (height: 100dvh) {
+      --vh: 100dvh;
+   }
+
+}

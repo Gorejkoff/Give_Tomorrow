@@ -1,0 +1,10 @@
+<section class="trust section-padding">
+   <div class="trust__container">
+      @@include('../UI/Swiper-Header.html',{'title': 'Нам доверяют'})
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            @@loop('./Trust-Slide.html','json/Trust.json')
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,49 @@
+<section class="card section-padding">
+   <div class="card__container">
+      <div class="card__body">
+         <div class="card__foto">
+            <div class="card__foto-shell">
+               <img src="@img/jpg/foto-1.jpg" alt="Фотография ребёнка">
+               <div class="card__amount-help">
+                  @@include('../UI/Amount_Help.html',{text: 'требуется',number:'90 000 ₽'})
+               </div>
+            </div>
+         </div>
+         <div>
+            <h2 class="card__name">Кира Иванова</h2>
+            <div class="card__promptly">
+               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00003 0.999995C7.00008 0.890079 6.96392 0.783207 6.89713 0.695912C6.83033 0.608617 6.73664 0.545763 6.63053 0.517073C6.52443 0.488384 6.41182 0.495457 6.31014 0.5372C6.20846 0.578942 6.12337 0.653027 6.06803 0.747995L2.56803 6.748C2.52369 6.82398 2.50018 6.91032 2.49988 6.9983C2.49958 7.08627 2.5225 7.17277 2.56632 7.24906C2.61015 7.32534 2.67332 7.38871 2.74947 7.43277C2.82562 7.47683 2.91205 7.50002 3.00003 7.5H5.00003V11C4.99997 11.1099 5.03614 11.2168 5.10293 11.3041C5.16972 11.3914 5.26341 11.4542 5.36952 11.4829C5.47563 11.5116 5.58823 11.5045 5.68991 11.4628C5.79159 11.421 5.87668 11.347 5.93203 11.252L9.43203 5.252C9.47637 5.17601 9.49987 5.08967 9.50017 5.00169C9.50047 4.91372 9.47755 4.82722 9.43373 4.75093C9.3899 4.67465 9.32673 4.61128 9.25058 4.56722C9.17443 4.52316 9.088 4.49997 9.00003 4.5H7.00003V0.999995Z" fill="white" />
+               </svg>
+               <span>Cрочная помощь!</span>
+            </div>
+            <ul class="card__data">
+               <li class="card__data-item">
+                  <span>Возраст:</span>
+                  <span>11 лет</span>
+               </li>
+               <li class="card__data-item">
+                  <span>Город:</span>
+                  <span>Ижевск</span>
+               </li>
+               <li class="card__data-item">
+                  <span>Диагноз:</span>
+                  <span>Эпилепсия</span>
+               </li>
+               <li class="card__data-item">
+                  <span>Цель:</span>
+                  <span>Оплата занятий иппотерапией</span>
+               </li>
+               <li class="card__data-item">
+                  <span>Сумма сбора:</span>
+                  <span>90 тысяч рублей в год</span>
+               </li>
+            </ul>
+            <div>
+               <a href="#go-help-one" class="button-color js-help-fee-tab-button" data-button_ts="0">Разовая помощь</a>
+               <a href="#go-help-monthly" class="button-border js-help-fee-tab-button" data-button_ts="1">Ежемесячная</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

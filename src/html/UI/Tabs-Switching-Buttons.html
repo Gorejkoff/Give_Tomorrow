@@ -1,0 +1,3 @@
+<div class="tabs-buttons">
+   @@for( var i = 0; i < context.text.length; i++ ){ <button type="button" data-button_ts="`+i+`" class="tabs-button @@if(context.name){@@name} `+(i === 0 ? 'active' : '')+`">`+context.text[i]+`</button> }
+</div>

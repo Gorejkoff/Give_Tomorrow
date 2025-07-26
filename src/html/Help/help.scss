@@ -1,0 +1,211 @@
+.help {
+   background: linear-gradient(var(--color-white), var(--color-smoky-White) 70%);
+
+   &__container {}
+
+   &__title {
+      margin-bottom: 48px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--color-black);
+
+      @media (min-width:768px) {
+         font-size: 52px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 64px;
+      }
+   }
+
+   &__tab-buttons {
+      margin-bottom: 48px;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px;
+
+      @media (min-width:998px) {
+         flex-direction: row;
+      }
+   }
+
+   &__baner {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-white);
+      border-radius: 32px;
+      overflow: hidden;
+   }
+
+   &__baner-image {
+      flex: 1 1 auto;
+      position: relative;
+      padding-bottom: 57%;
+      min-height: 300px;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__baner-text {
+      padding: 24px;
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--color-black-a06);
+   }
+
+   &__baner-title {
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      color: var(--color-black)
+   }
+
+   &__payment-bg {
+      padding: 24px;
+      flex: 0 0 400px;
+      background-color: var(--color-white);
+      border-radius: 32px;
+   }
+
+   &__form-title {
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--color-black-a06);
+   }
+
+   &__form-group-checkbox {
+      margin-bottom: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+   }
+
+   &__form-checkbox {
+      span {
+         cursor: pointer;
+         display: inline-block;
+         padding: 9px 24px 7px;
+         display: block;
+         text-align: center;
+         min-height: 32px;
+         border-radius: 8px;
+         background-color: var(--color-sapphire-blue);
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 100%;
+         color: var(--color-black);
+         transition: color 0.3s, background-color 0.3s;
+      }
+
+      input {
+         display: none;
+      }
+
+      input:checked+span {
+         background-color: var(--color-green);
+         color: var(--color-white);
+      }
+   }
+
+   &__input-sum {
+      position: relative;
+
+      input {
+         border: 2px solid var(--color-green-a06);
+      }
+
+      span {
+         position: absolute;
+         top: 50%;
+         right: 18px;
+         transform: translateY(-50%);
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 100%;
+         color: var(--color-green);
+      }
+   }
+
+   &__form-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+   }
+
+   &__privacy-policy {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 133%;
+      color: var(--color-black-a04);
+
+      a {
+         color: var(--color-black);
+      }
+   }
+
+
+   &__fee-info-title {
+      margin-bottom: 40px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 117%;
+      color: var(--color-black);
+   }
+
+   &__fee-info-list {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      color: var(--color-black);
+
+      li {
+         list-style: decimal;
+         list-style-position: inside;
+         margin-bottom: 32px;
+      }
+   }
+
+   p {
+      margin-top: 16px;
+      font-size: 18px;
+      line-height: 133%;
+
+      color: var(--color-black-a06);
+
+      b {
+         font-weight: 500;
+         color: var(--color-black);
+      }
+   }
+}
+
+.js-payment-method-tab,
+.js-help-fee-tab {
+   display: none;
+
+   &.active {
+      display: block;
+   }
+}
