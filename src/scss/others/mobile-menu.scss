@@ -15,6 +15,9 @@
    width: 100%;
    background-color: var(--color-white);
    transition: left 0.5s;
+   overflow-x: hidden;
+   overflow-y: auto;
+
 }
 
 .menu-is-open {

@@ -167,6 +167,94 @@ function moving(e, order, addressMove) {
 
 
 
+
+window.addEventListener('load', function (event) {
+   gsap.registerPlugin(ScrollTrigger);
+
+   ScrollTrigger.config({ ignoreMobileResize: true });
+   ScrollTrigger.isTouch && ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
+
+   if (MIN1024.matches) {
+      let tl = gsap.timeline({
+         scrollTrigger: {
+            trigger: '#wrapper',
+            pin: true,
+            pinSpacing: false,
+            start: '0% 0%',
+            end: '+=2000',
+            scrub: true,
+            // markers: {
+            //    startColor: "green",
+            //    endColor: "red",
+            //    fontSize: "40px",
+            //    fontWeight: "bold",
+            //    indent: 20
+            // }
+         }
+      })
+      tl.to('#poster-text', { opacity: 0.2 })
+         .to('#flyer-1', { x: '-110%' })
+         .set('#poster', { pointerEvents: 'none' }, '+=0.5')
+         .set('#about-fund', { pointerEvents: 'all' })
+         .to('#poster', { opacity: 0 })
+         .to('#header', { boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.04)' })
+         .addPause(1);
+   }
+})
+/* открывает, закрывает модальные окна. */
+/*
+добавить классы
+js-modal-hidden - родительский контейнер модального окна который скрывается и показывается, задать стили скрытия
+js-modal-visible - задать стили открытия
+js-modal-close - кнопка закрытия модального окна находится внутри js-modal-hidde
+кнопка открытия, любая:
+js-modal-open - кнопка открытия модального окна
+data-modal_open="id" - id модального окна
+если надо что бы окно закрывалось при клике на пустое место (фон), добавляется атрибут js-modal-stop-close.
+js-modal-stop-close - атрибут указывает на поле, при клике на которое не должно происходить закрытие окна, 
+т.е. контейнер контента, при этом внешний родительский контейнет помечается атрибутом js-modal-close.
+допускается дополнительно кнопка закрытия внутри js-modal-stop-close.
+*/
+document.addEventListener('click', (event) => {
+   if (event.target.closest('.js-modal-open')) { openModal(event) }
+   if (event.target.closest('.js-modal-close')) { testModalStopClose(event) }
+})
+function openModal(event) {
+   let id = event.target.closest('.js-modal-open').dataset.modal_open;
+   if (typeof id !== "undefined") { initOpenModal(id) };
+}
+function testModalStopClose(event) {
+   if (event.target.closest('.js-modal-stop-close') &&
+      event.target.closest('.js-modal-stop-close') !==
+      event.target.closest('.js-modal-close').closest('.js-modal-stop-close')) {
+      return
+   }
+   closeModal(event);
+}
+function closeModal(event) {
+   event.target.closest('.js-modal-hidden').classList.remove('js-modal-visible');
+   activeScrollCloseModal();
+}
+// функция закрытия модального окна (передать id модального окна)
+function initCloseModal(id) {
+   if (document.querySelector(`#${id}`)) {
+      document.querySelector(`#${id}`).classList.remove('js-modal-visible');
+   }
+   activeScrollCloseModal();
+}
+// функция открытия модального окна (передать id модального окна)
+function initOpenModal(id) {
+   if (document.querySelector(`#${id}`)) {
+      document.querySelector(`#${id}`).classList.add('js-modal-visible');
+      document.body.classList.add('body-overflow')
+   }
+}
+function activeScrollCloseModal() {
+   if (!document.querySelector('.js-modal-visible')) {
+      document.body.classList.remove('body-overflow');
+   }
+}
+
 function addPropsSwiper(selector) {
    const target = document.querySelector(selector);
    const swiper = target.querySelector('.swiper');

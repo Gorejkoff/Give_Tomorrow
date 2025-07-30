@@ -1,12 +1,13 @@
 .modal {
    --height-modal: 100vh;
    position: fixed;
-   top: var(--header-h);
+   // top: var(--header-h);
+   top: 0;
    left: 0;
-   z-index: 19;
+   z-index: 30;
    width: 100vw;
    height: var(--height-modal);
-   background-color: var(--color-modal-bg);
+   background-color: var(--color-pale-blue);
    scrollbar-gutter: stable;
    overflow-y: auto;
    overflow-x: hidden;
@@ -30,10 +31,6 @@
       min-height: var(--height-modal);
       display: flex;
       align-items: center;
-
-      @media (max-width:767.98px) {
-         padding: 0;
-      }
    }
 
 
@@ -41,8 +38,24 @@
       position: relative;
       margin: 0 auto;
       width: 100%;
-      background-color: var(--color-white);
+      // background-color: var(--color-white);
+   }
 
+   &__close {
+      padding-top: 24px;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      svg {
+         rect {
+            stroke: var(--color-white)
+         }
+
+         path {
+            fill: var(--color-white)
+         }
+      }
    }
 }
 

@@ -2,16 +2,24 @@
 @use '../assets/mixin.scss' as *;
 
 .header {
-   position: relative;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
    z-index: 20;
    padding-top: 12px;
    padding-bottom: 12px;
    border-radius: 0 0 32px 32px;
    background-color: var(--color-white);
    box-shadow: 0 4px 20px 0 var(--color-shadow);
+   background: #fff;
    font-weight: 500;
    font-size: 16px;
    line-height: 100%;
+
+   @media (min-width:1024px) {
+      box-shadow: 0 4px 20px 0 transparent, 0 2px 4px 0 transparent;
+   }
 
    &__container {}
 
@@ -32,6 +40,7 @@
       svg {
          max-height: 40px;
          width: auto;
+         max-width: 130px;
 
          @media (min-width:1024px) {
             max-height: 62px;

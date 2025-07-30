@@ -7,12 +7,14 @@
 
 
 <body>
+   @@include('html/2_header.html',{})
 
-   <div class="wrapper">
+   <div id="wrapper" class="wrapper">
 
-      @@include('html/2_header.html',{})
 
       <div class="main">
+
+         @@include('html/Poster/Poster.html',{})
 
          @@include('html/About_Fund/About_Fund.html',{})
 
@@ -40,10 +42,14 @@
 
    </div>
 
+   @@include('html/Modal/Modal-Documents.html',{})
+
+
    @@include('html/Mobile-Menu/Mobile-Menu.html',{})
 
    @@include('html/3_scripts.html',{
    swiper: true,
+   gsap: true
    })
 
 

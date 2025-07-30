@@ -1,10 +1,20 @@
 @use '../../scss/assets/variablesSCSS.scss' as *;
 
 .help-quantity {
+   position: relative;
+   z-index: 3;
+   overflow: hidden;
+   background-color: var(--color-smoky-White);
+
+   @media (min-width:1024px) {
+      margin-top: -120px;
+      border-radius: 48px 48px 0 0;
+   }
 
    &__container {}
 
    &__enumeration {
+      padding-top: 32px;
       margin-bottom: 40px;
       display: flex;
       flex-wrap: wrap;
